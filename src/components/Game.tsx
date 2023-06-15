@@ -37,9 +37,44 @@ export const Game: React.FC<IGameProps> = ({
         justifyContent: 'center',
         background: 'black',
     }}>
-        <div style={{padding: '20px', color: 'white', display: 'flex', alignItems: 'center'}}>
-            <h2>WASD to move&nbsp;</h2>
-            <img alt={"a cat"} src={cat} style={{height: '40px'}}/>
+        <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
+            padding: '20px',
+            color: 'white',
+            height: '95vh',
+            textAlign: 'right'
+        }}>
+            <div style={{display: 'flex', alignItems: 'center'}}>
+                <h2>WASD to move&nbsp;</h2>
+                <img alt={"a cat"} src={cat} style={{height: '40px'}}/>
+            </div>
+            <div>
+                <h3>Credits</h3>
+                <div style={{display: 'flex', alignItems: 'center', justifyContent: 'flex-end', marginBottom: '10px'}}>
+                    <a href="https://freesound.org/people/td6d/sounds/533946/" target="_blank"
+                       rel="noreferrer">freesound.org</a>
+                    &nbsp;
+                    <div style={{width: '50px'}}><span style={{fontSize: '40px'}}>🔈</span></div>
+                </div>
+                <div style={{display: 'flex', alignItems: 'center', justifyContent: 'flex-end', marginBottom: '10px'}}>
+                    <a href="https://freesound.org/people/kiddpark/sounds/201159/" target="_blank"
+                       rel="noreferrer">freesound.org</a>
+                    &nbsp;
+                    <div style={{width: '50px'}}><span style={{fontSize: '40px'}}>🔈</span></div>
+                </div>
+
+                <div style={{display: 'flex', alignItems: 'center', justifyContent: 'flex-end', marginBottom: '10px'}}>
+
+                    <a
+                        href="https://fonts.google.com/specimen/Press+Start+2P" target="_blank"
+                        rel="noreferrer">google</a>
+                    &nbsp;
+                    <div style={{width: '50px'}}><span style={{fontSize: '40px'}}>🔡</span></div>
+                </div>
+
+            </div>
         </div>
         <div style={{background: '#eef1f5', borderLeft: '3px solid white', borderRight: '3px solid white'}}>
 
@@ -126,25 +161,24 @@ export const Game: React.FC<IGameProps> = ({
 
             <div>
                 <h3>Credits</h3>
-                <div style={{display: 'flex', alignItems: 'center', marginBottom: '10px'}}>
+                <div
+                    style={{display: 'flex', alignItems: 'center', justifyContent: 'flex-start', marginBottom: '10px'}}>
                     <div style={{width: '50px'}}><img src={bill} alt={"a bill"} style={{height: '40px'}}/></div>
-                    &nbsp;by&nbsp;<a href="https://kenney.nl/assets/generic-items" target="_blank" rel="noreferrer">kenney.nl</a>
+                    &nbsp;<a href="https://kenney.nl/assets/generic-items" target="_blank"
+                             rel="noreferrer">kenney.nl</a>
                 </div>
-                <div style={{display: 'flex', alignItems: 'center', marginBottom: '10px'}}>
+                <div
+                    style={{display: 'flex', alignItems: 'center', justifyContent: 'flex-start', marginBottom: '10px'}}>
                     <div style={{width: '50px'}}><img src={cat} alt={"a cat"} style={{height: '40px'}}/></div>
-                    &nbsp;by&nbsp;<a
+                    &nbsp;<a
                     href="https://www.pngfind.com/mpng/iTTTwhT_cat-sprite-png-2d-game-cat-character-transparent/"
                     target="_blank" rel="noreferrer">pngfind</a>
                 </div>
-                <div style={{display: 'flex', alignItems: 'center', marginBottom: '10px'}}>
+                <div
+                    style={{display: 'flex', alignItems: 'center', justifyContent: 'flex-start' , marginBottom: '10px'}}>
                     <div style={{width: '50px'}}><span style={{fontSize: '40px'}}>🧑‍💻</span></div>
-                    &nbsp;by&nbsp; <a
+                    &nbsp; <a
                     href="https://github.com/nicfix" target="_blank" rel="noreferrer">@nicfix</a>
-                </div>
-                <div style={{display: 'flex', alignItems: 'center', marginBottom: '10px'}}>
-                    <div style={{width: '50px'}}><span style={{fontSize: '40px'}}>🔡</span></div>
-                    &nbsp;by&nbsp; <a
-                    href="https://fonts.google.com/specimen/Press+Start+2P" target="_blank" rel="noreferrer">google</a>
                 </div>
             </div>
         </div>

@@ -3,5 +3,5 @@ import {IWithSpeed} from "./IWithSpeed";
 
 
 export interface IMovable extends IWithSpeed, IWithPosition {
-
+    wasResetDueToWallCollision: boolean;
 }

@@ -84,12 +84,15 @@ export default class GameScene {
      * @param time
      */
     collideWithWalls(movable: IMovable, delta: number, time: number) {
+        movable.wasResetDueToWallCollision = false;
+
         let shouldFlipX = false;
         let newX = movable.position.x;
         if (movable.position.x > this.box.bottomRight.x) {
             if (movable.speed.x > 0) {
                 shouldFlipX = true;
                 newX = this.box.bottomRight.x;
+                movable.wasResetDueToWallCollision = true;
             }
         }
 
@@ -97,6 +100,7 @@ export default class GameScene {
             if (movable.speed.x < 0) {
                 shouldFlipX = true;
                 newX = this.box.topLeft.x;
+                movable.wasResetDueToWallCollision = true;
             }
         }
 
@@ -109,6 +113,7 @@ export default class GameScene {
             if (movable.speed.y > 0) {
                 shouldFlipY = true;
                 newY = this.box.bottomRight.y;
+                movable.wasResetDueToWallCollision = true;
             }
         }
 
@@ -116,6 +121,7 @@ export default class GameScene {
             if (movable.speed.y < 0) {
                 shouldFlipY = true;
                 newY = this.box.topLeft.y;
+                movable.wasResetDueToWallCollision = true;
             }
         }
 

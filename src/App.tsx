@@ -20,7 +20,7 @@ function App() {
                     alignItems: 'center',
                     width: '100vw',
                     height: '100vh',
-                    background: 'rgba(0,0,0,0.9)',
+                    background: 'rgb(0,0,0)',
                     color: 'white'
                 }}>
                 <h1>Loading..</h1>

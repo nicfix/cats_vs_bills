@@ -34,12 +34,13 @@ const GamePage: React.FC<any> = () => {
 
 
     useEffect(() => {
+
         if (gameOver) {
-            const score = gameScene.caughtBills.length
+
+            const score = gameScene.caughtBills.length;
             if (score > highScore) {
                 localStorage.setItem('highScore', `${score}`);
             }
-
             return;
         }
         const interval = setTimeout(() => {
