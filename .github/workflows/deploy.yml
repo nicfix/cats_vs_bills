@@ -1,0 +1,44 @@
+name: GCP App Engine Deploy
+
+on:
+  push:
+    tags:
+      - v*
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.13.1]
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - uses: google-github-actions/setup-gcloud@v0
+        with:
+          service_account_key: ${{ secrets.GCP_SERVICE_USER_KEY }}
+          project_id: ${{ secrets.GCP_PROJECT_ID }}
+          export_default_credentials: true
+
+      - name: npm install, build
+        run: |
+          npm ci
+          npm run build --if-present
+        env:
+          CI: true
+
+      - name: Test
+        run: |
+          npm run test
+
+      - name: Deploy
+        run: |
+          gcloud app deploy app.yaml
+        working-directory: ${{ env.working-directory }}
