@@ -1,0 +1,9 @@
+export const MAX_BLOWING_FORCE = 2000;
+export const RADIAL_BLOWERS_COUNT = 10;
+export const ROTATIONAL_BLOWERS_COUNT = 5;
+export const BILLS_COUNT = 100;
+export const BLOWERS_MOVEMENT_PERIOD = 2;
+export const MAX_GAME_TIME = 30;
+export const HEADER_HEIGHT = 90;
+export const BOX_WIDTH = Math.max(window.innerWidth / 2, 600);
+export const BOX_HEIGHT = Math.max(window.innerHeight - HEADER_HEIGHT, 720);
