@@ -134,13 +134,13 @@ export const Game: React.FC<IGameProps> = ({
                     <PetSprite pet={gameScene.pet} isStatic={false}/>
                     {
                         gameScene.blowers.map(
-                            blower => <AirBlowerSprite blower={blower} time={time}
-                                                       max_blowing_force={maxBlowingForce}/>
+                            (blower, idx) => <AirBlowerSprite key={idx} blower={blower} time={time}
+                                                              max_blowing_force={maxBlowingForce}/>
                         )
                     }
                     {
                         gameScene.bills.map(
-                            bill => <BillSprite bill={bill}/>
+                            (bill, idx) => <BillSprite key={idx} bill={bill}/>
                         )
                     }
                 </Container>
@@ -175,7 +175,7 @@ export const Game: React.FC<IGameProps> = ({
                     target="_blank" rel="noreferrer">pngfind</a>
                 </div>
                 <div
-                    style={{display: 'flex', alignItems: 'center', justifyContent: 'flex-start' , marginBottom: '10px'}}>
+                    style={{display: 'flex', alignItems: 'center', justifyContent: 'flex-start', marginBottom: '10px'}}>
                     <div style={{width: '50px'}}><span style={{fontSize: '40px'}}>🧑‍💻</span></div>
                     &nbsp; <a
                     href="https://github.com/nicfix" target="_blank" rel="noreferrer">@nicfix</a>
