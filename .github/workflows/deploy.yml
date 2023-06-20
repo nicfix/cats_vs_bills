@@ -42,3 +42,8 @@ jobs:
         run: |
           gcloud app deploy app.yaml
         working-directory: ${{ env.working-directory }}
+
+      - name: Deploy Dispatch
+        run: |
+          gcloud app deploy dispatch.yaml
+        working-directory: ${{ env.working-directory }}

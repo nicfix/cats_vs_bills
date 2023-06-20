@@ -1,0 +1,3 @@
+dispatch:
+  - url: "cats-vs-bills.minigames.nicolasacco.cloud/*"
+    service: cats-vs-bills
